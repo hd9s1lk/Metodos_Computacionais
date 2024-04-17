@@ -9,6 +9,8 @@ function [sol,nit] = GaussSeidel(A,b,tol) %%A é matriz, b também
     U=triu(-A,1);
     L=tril(-A,-1);
 
+   
+
     M=(D-L)\U;
     N=(D-L)\b;
     rho=max(abs(eig(M)));
