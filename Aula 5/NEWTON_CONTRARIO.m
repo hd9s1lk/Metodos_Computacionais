@@ -1,14 +1,13 @@
-function[X,erro] = NEWTON_CONTRARIO(Xo,i)
+function[X,erro] = NEWTON_CONTRARIO(Xo,n)
     format long
     erro = 1000;
     i=0;
     tol=0.000000123;
-    while erro>=tol
+    for i = 0 : n
         X=Xo-JACOBIANO(Xo)\FUNC(Xo)
         erro=norm(FUNC(X),2);
-        i=i+1
         Xo=X;
     end
+    fprintf('---Fim---')
 end
-
     

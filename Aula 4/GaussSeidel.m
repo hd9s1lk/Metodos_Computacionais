@@ -6,10 +6,10 @@ function [sol,nit] = GaussSeidel(A,b,tol) %%A é matriz, b também
     end
     format long
     D=diag(diag(A));
-    U=triu(-A,1);
-    L=tril(-A,-1);
+    U=triu(-A,1)
+    L=tril(-A,-1)
 
-    M=(D-L)\U;
+    M=(D-L)\U  %iteracao
     N=(D-L)\b;
     rho=max(abs(eig(M)));
     if rho >=1

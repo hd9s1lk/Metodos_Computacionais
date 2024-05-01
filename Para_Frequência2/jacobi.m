@@ -6,10 +6,10 @@ function [sol,nit] = jacobi(A,b,tol) %%A é matriz  %%se nao der, trocar as linh
     end
     format long
     D=diag(diag(A));
-    U=triu(-A,1);
-    L=tril(-A,-1);
+    U=triu(-A,1)
+    L=tril(-A,-1)
 
-    M=D\(L+U);
+    M=D\(L+U)  %iteração
     N=D\b;
     rho=max(abs(eig(M)));
     if rho >=1
