@@ -1,6 +1,6 @@
 
-x=[1,1.5,2.5,3,3.5,4,5.5,6];   %%mudar tabela com x
-y=[3.12,2.75,2.14,1.89,1.67,1.47,1.01,0.89]; %%mudar tabela com y
+x=[0,1,2];   %%mudar tabela com x
+y=[-1,3,4]; %%mudar tabela com y
 plot(x,y,'o')
 hold on 
 co = polyfit(x,y,1)
